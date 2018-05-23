@@ -12,6 +12,13 @@
 	</modules>
 
 	<dependencies>
+		
+		<dependency>
+			<groupId>jiangdaxianService-api</groupId>
+			<artifactId>jiangdaxianService-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>jiangdaxian_component_web</groupId>
 			<artifactId>jiangdaxian_component_web</artifactId>
