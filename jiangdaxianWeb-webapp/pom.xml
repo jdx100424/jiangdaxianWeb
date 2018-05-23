@@ -11,6 +11,7 @@
 	<groupId>jiangdaxianWeb-webapp</groupId>
 	<artifactId>jiangdaxianWeb-webapp</artifactId>
 	<packaging>war</packaging>
+	
 	<dependencies>
 		<dependency>
 			<groupId>jiangdaxianWeb-service</groupId>
@@ -25,4 +26,27 @@
 			<version>2.1.5</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+			<!-- Maven Compiler: Compiles the project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
