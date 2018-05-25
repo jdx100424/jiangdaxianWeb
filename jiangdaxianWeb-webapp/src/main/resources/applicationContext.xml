@@ -17,6 +17,7 @@
 	<context:annotation-config />
 	 
  	<import resource="dubboContext.xml" />
+ 	<import resource="ehcacheContext.xml" />
  
 	<bean name="propertiesHolder" class="com.jiangdaxian.common.util.properties.CustomizedPropertyPlaceholderConfigurer">
 		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
