@@ -30,6 +30,14 @@ public class HellowordController {
 		return JSONObject.toJSONString(map);
 	}
 	
+	@RequestMapping("/kafka")
+	@ResponseBody
+	public String kafka() {
+		hellowordService.sendKafka();
+		Map<String, Object> map = new HashMap<String, Object>();
+		return JSONObject.toJSONString(map);
+	}
+	
 	@RequestMapping("/throwError")
 	@ResponseBody
 	public String throwError() {
