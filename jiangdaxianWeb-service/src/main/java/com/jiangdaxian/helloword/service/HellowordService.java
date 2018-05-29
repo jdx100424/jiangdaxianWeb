@@ -1,5 +1,6 @@
 package com.jiangdaxian.helloword.service;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class HellowordService {
 	private HellowordApi hellowordApi;
 	
 	@Autowired
-	private BaseProducer hellowordProducer;
+	private BaseProducer<Calendar> hellowordProducer;
 	
 	public String get() {
 		String dubboApi = hellowordApi.sayHello();
@@ -24,10 +25,6 @@ public class HellowordService {
 	}
 	
 	public void sendKafka() {
-		MessageDto dto = new MessageDto();
-		Map<String,Object> sendMap = new HashMap<String,Object>();
-		sendMap.put("jdx", "gogogo" + System.currentTimeMillis());
-		dto.setMessageInfo(sendMap);
-		hellowordProducer.send("jdxHellowordKafka", dto);
+		hellowordProducer.send("jdxHellowordKafka", Calendar.getInstance());
 	}
 }
