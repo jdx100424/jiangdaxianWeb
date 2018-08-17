@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.jiangdaxian.helloword.api.HellowordApi;
@@ -15,9 +16,9 @@ import com.jiangdaxian.kafka.dto.MessageDto;
 public class HellowordService {
 	@Autowired
 	private HellowordApi hellowordApi;
-	
 	@Autowired
-	private BaseProducer<Calendar> hellowordProducer;
+	@Qualifier("hellowordProducer")
+	private com.jiangdaxian.kafka.BaseProducer<Calendar> hellowordProducer;
 	
 	public String get() {
 		String dubboApi = hellowordApi.sayHello();
