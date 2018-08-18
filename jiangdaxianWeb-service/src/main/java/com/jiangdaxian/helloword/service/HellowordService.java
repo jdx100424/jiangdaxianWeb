@@ -26,6 +26,6 @@ public class HellowordService {
 	}
 	
 	public void sendKafka() {
-		hellowordProducer.send("jdxHellowordKafka", Calendar.getInstance());
+		hellowordProducer.send("aaaaaaaa", Calendar.getInstance());
 	}
 }
