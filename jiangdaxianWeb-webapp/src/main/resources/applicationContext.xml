@@ -18,7 +18,8 @@
 	 
  	<import resource="dubboContext.xml" />
  	<import resource="ehcacheContext.xml" />
- 	<import resource="kafkaContext.xml" />
+ 	<!--  
+ 	<import resource="kafkaContext.xml" />-->
 
  
 	<bean name="propertiesHolder" class="com.jiangdaxian.common.util.properties.CustomizedPropertyPlaceholderConfigurer">
