@@ -10,35 +10,132 @@
 		<module>jiangdaxianWeb-webapp</module>
 		<module>jiangdaxianWeb-service</module>
 	</modules>
+	
+	<properties>
+		<okhttp.version>2.7.5</okhttp.version>
+		<commons-lang3.version>3.2.1</commons-lang3.version>
+		<org.apache.poi.version>3.14</org.apache.poi.version>
+		<java.version>1.8</java.version>
+		<commons.beanutils.version>1.9.3</commons.beanutils.version>
+		<log4j2.version>2.7</log4j2.version>
+		<maven.compiler.version>2.3.2</maven.compiler.version>
+		<dubbo-alibaba.version>2.5.3</dubbo-alibaba.version>
+		<spring-boot.version>1.5.3.RELEASE</spring-boot.version>
+		<alibaba.fastjson.version>1.2.7</alibaba.fastjson.version>
+		<zookeeper.version>3.4.8</zookeeper.version>
+		<zkclient.version>0.3</zkclient.version>
+		<junit.version>4.12</junit.version>
+	</properties>
 
 	<dependencies>
-		
 		<dependency>
-			<groupId>jiangdaxianService-api</groupId>
-			<artifactId>jiangdaxianService-api</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<!--  
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>	
 		<dependency>
-			<groupId>jiangdaxian_component_kafka</groupId>
-			<artifactId>jiangdaxian_component_kafka</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>	-->	
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${org.apache.poi.version}</version>
+		</dependency>	
 		<dependency>
-			<groupId>jiangdaxian_component_web</groupId>
-			<artifactId>jiangdaxian_component_web</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>jiangdaxian_component_ehcache</groupId>
-			<artifactId>jiangdaxian_component_ehcache</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+		    <groupId>com.squareup.okhttp</groupId>
+		    <artifactId>okhttp</artifactId>
+		    <version>${okhttp.version}</version>
+		</dependency>
+		<dependency>
+	    	<groupId>org.springframework.boot</groupId>
+	    	<artifactId>spring-boot-autoconfigure</artifactId>
+	    	<version>${spring-boot.version}</version>
+		</dependency>	
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>${junit.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>	
+		<dependency>
+    		<groupId>com.101tec</groupId>
+    		<artifactId>zkclient</artifactId>
+    		<version>${zkclient.version}</version>
+		</dependency>	
+		<dependency>
+		    <groupId>org.apache.zookeeper</groupId>
+		    <artifactId>zookeeper</artifactId>
+		    <version>${zookeeper.version}</version>
+		    <exclusions>
+		    	<exclusion>
+		    		<groupId>org.slf4j</groupId>
+		    		<artifactId>slf4j-api</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		<groupId>org.slf4j</groupId>
+		    		<artifactId>slf4j-log4j12</artifactId>
+		    	</exclusion>
+		    </exclusions>
+		</dependency>
+		<dependency>  
+        	<groupId>com.alibaba</groupId>  
+        	<artifactId>dubbo</artifactId>  
+        	<version>${dubbo-alibaba.version}</version>  
+        	<exclusions>
+            	<exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
+     	</dependency>
+	
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${alibaba.fastjson.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons.beanutils.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
 			<exclusions>
 				<exclusion>
-					<groupId>ch.qos.logback</groupId>
-					<artifactId>logback-classic</artifactId>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
 		</dependency>
 	</dependencies>
 </project>
