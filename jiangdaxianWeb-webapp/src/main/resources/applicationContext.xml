@@ -15,10 +15,9 @@
 
 	<context:component-scan base-package="com.jiangdaxian" />
 	<context:annotation-config />
-	 
+	<!--  
  	<import resource="dubboContext.xml" />
  	<import resource="ehcacheContext.xml" />
- 	<!--  
  	<import resource="kafkaContext.xml" />-->
 
  
